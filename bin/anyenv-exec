@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Summary: Execute the command with each *envs
+# Usage: anyenv exec -- version
+
+set -ue
+
+for e in $(anyenv envs); do
+  $e $@
+done
